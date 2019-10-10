@@ -1,30 +1,41 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Button from "@material-ui/core/Button";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useLocation,
+  Redirect
+} from "react-router-dom";
+import { Container, Box } from "@material-ui/core/";
+import Home from "./home/Home";
+import Resipe from "./resipe/Resipe";
+import Weight from "./weight/Weight";
+import FoodMenu from "./food-menu/FoodMenu";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button variant="contained" color="secondary">
-          Hi
-        </Button>
-      </header>
-    </div>
+    <Container maxWidth="lg">
+      <Router>
+        <Switch>
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/resipe" component={Resipe} />
+          <Route exact path="/weight" component={Weight} />
+          <Route exact path="/food-menu" component={FoodMenu} />
+          <Route path="*" component={NoMatch} />
+        </Switch>
+      </Router>
+    </Container>
   );
 };
+
+/**
+ * URLが存在しない場合のフォールバック処理。
+ * ホーム画面へリダイレクトします。
+ *
+ * @returns
+ */
+function NoMatch() {
+  return <Redirect to="/home"></Redirect>;
+}
 
 export default App;
