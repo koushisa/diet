@@ -7,10 +7,10 @@ import {
   Redirect
 } from "react-router-dom";
 import { Container, Box } from "@material-ui/core/";
-import Home from "./home/Home";
-import Resipe from "./resipe/Resipe";
-import Weight from "./weight/Weight";
-import FoodMenu from "./food-menu/FoodMenu";
+import Home from "./components/home/Home";
+import Resipe from "./components/resipe/Resipe";
+import Weight from "./components/weight/Weight";
+import FoodMenu from "./components/food-menu/FoodMenu";
 
 const App: React.FC = () => {
   return (
