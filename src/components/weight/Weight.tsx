@@ -112,10 +112,8 @@ export default function Weight() {
 
   return (
     <React.Fragment>
-      <Box mt="20%">
-        <h3>10月</h3>
-        <Line data={data} width={400} height={600} />
-      </Box>
+      <h3>10月</h3>
+      <Line data={data} width={400} height={600} />
     </React.Fragment>
   );
 }

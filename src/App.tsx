@@ -11,6 +11,7 @@ import Home from "./components/home/Home";
 import Resipe from "./components/resipe/Resipe";
 import Weight from "./components/weight/Weight";
 import FoodMenu from "./components/food-menu/FoodMenu";
+import ContentWrapper from "./components/ContentWrapper";
 
 const App: React.FC = () => {
   return (
@@ -18,9 +19,9 @@ const App: React.FC = () => {
       <Router>
         <Switch>
           <Route exact path="/home" component={Home} />
-          <Route exact path="/resipe" component={Resipe} />
-          <Route exact path="/weight" component={Weight} />
-          <Route exact path="/food-menu" component={FoodMenu} />
+          <Route exact path="/resipe" component={ContentWrapper(Resipe)} />
+          <Route exact path="/weight" component={ContentWrapper(Weight)} />
+          <Route exact path="/food-menu" component={ContentWrapper(FoodMenu)} />
           <Route path="*" component={NoMatch} />
         </Switch>
       </Router>
@@ -30,7 +31,7 @@ const App: React.FC = () => {
 
 /**
  * URLが存在しない場合のフォールバック処理。
- * ホーム画面へリダイレクトします。
+ * 現時点では、ホーム画面へリダイレクトします。
  *
  * @returns
  */
