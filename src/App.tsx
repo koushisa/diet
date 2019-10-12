@@ -9,7 +9,8 @@ import {
 import { Container, Box } from "@material-ui/core/";
 import Home from "./components/home/Home";
 import Resipe from "./components/resipe/Resipe";
-import Weight from "./components/weight/Weight";
+import WeightContainer from "./components/weight/WeightContainer";
+
 import FoodMenu from "./components/food-menu/FoodMenu";
 import ContentWrapper from "./components/ContentWrapper";
 
@@ -20,7 +21,11 @@ const App: React.FC = () => {
         <Switch>
           <Route exact path="/home" component={Home} />
           <Route exact path="/resipe" component={ContentWrapper(Resipe)} />
-          <Route exact path="/weight" component={ContentWrapper(Weight)} />
+          <Route
+            exact
+            path="/weight"
+            component={ContentWrapper(WeightContainer)}
+          />
           <Route exact path="/food-menu" component={ContentWrapper(FoodMenu)} />
           <Route path="*" component={NoMatch} />
         </Switch>
