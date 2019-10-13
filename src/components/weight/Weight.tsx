@@ -4,18 +4,17 @@ import * as chartjs from "chart.js";
 import { Box, Button } from "@material-ui/core";
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@material-ui/icons";
 
-//TODO anyをなくす
-interface props {
+type Props = {
   year: number;
   month: number;
   data: ChartData<chartjs.ChartData>;
-  decrementYear: any;
-  incrementYear: any;
-  decrementMonth: any;
-  incrementMonth: any;
-}
+  decrementYear: () => void;
+  incrementYear: () => void;
+  decrementMonth: () => void;
+  incrementMonth: () => void;
+};
 
-export default function Weight(props: props) {
+export default function Weight(props: Props) {
   const {
     year,
     month,
