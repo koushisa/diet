@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useLocation,
   Redirect
 } from "react-router-dom";
 import { Container, Box } from "@material-ui/core/";
