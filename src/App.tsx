@@ -5,7 +5,7 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import { Container, Box } from "@material-ui/core/";
+import { Container } from "@material-ui/core/";
 import Home from "./components/home/Home";
 import Resipe from "./components/resipe/Resipe";
 import WeightContainer from "./components/weight/WeightContainer";
@@ -34,10 +34,8 @@ const App: React.FC = () => {
 };
 
 /**
- * URLが存在しない場合のフォールバック処理。
- * 現時点では、ホーム画面へリダイレクトします。
- *
- * @returns
+ * URLが存在しない場合のフォールバック処理です
+ * 現時点では、ホーム画面へリダイレクトします
  */
 function NoMatch() {
   return <Redirect to="/home"></Redirect>;
