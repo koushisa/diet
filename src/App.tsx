@@ -5,7 +5,7 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import { Container, Box } from "@material-ui/core/";
+import { Container } from "@material-ui/core/";
 import Home from "./components/home/Home";
 import Resipe from "./components/resipe/Resipe";
 import WeightContainer from "./components/weight/WeightContainer";
