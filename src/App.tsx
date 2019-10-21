@@ -34,10 +34,8 @@ const App: React.FC = () => {
 };
 
 /**
- * URLが存在しない場合のフォールバック処理です。
- * 現時点では、ホーム画面へリダイレクトします。
- *
- * @returns
+ * URLが存在しない場合のフォールバック処理です
+ * 現時点では、ホーム画面へリダイレクトします
  */
 function NoMatch() {
   return <Redirect to="/home"></Redirect>;
