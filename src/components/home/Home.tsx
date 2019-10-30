@@ -20,7 +20,7 @@ export default function Home() {
           color="action"
           style={{ width: "50%", height: 300 }}
         ></AccessibilityNew>
-        //
+        ////
       </Link>
       <Link to="/food-menu" role="button">
         //
@@ -28,7 +28,7 @@ export default function Home() {
           color="action"
           style={{ width: "50%", height: 300 }}
         ></EventNote>
-        //
+        //test/ aa
       </Link>
     </React.Fragment>
   );
