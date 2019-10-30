@@ -15,20 +15,16 @@ export default function Home() {
         </Box>
       </Link>
       <Link to="/weight" role="button">
-        //
         <AccessibilityNew
           color="action"
           style={{ width: "50%", height: 300 }}
         ></AccessibilityNew>
-        ////
       </Link>
       <Link to="/food-menu" role="button">
-        //
         <EventNote
           color="action"
           style={{ width: "50%", height: 300 }}
         ></EventNote>
-        //test/ aa
       </Link>
     </React.Fragment>
   );
