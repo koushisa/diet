@@ -3,7 +3,7 @@ import React from "react";
 export default function Resipe() {
   return (
     <React.Fragment>
-      <h3>Resipe</h3>
+      <h3>レシピ</h3>
     </React.Fragment>
   );
 }
