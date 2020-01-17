@@ -5,7 +5,6 @@ import { Box } from "@material-ui/core/";
 
 export default function Home() {
   return (
-    //ab
     <React.Fragment>
       <Link to="/resipe" role="button">
         <Box display="flex" justifyContent="center">
